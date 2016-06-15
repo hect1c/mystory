@@ -67,9 +67,7 @@ class HartleyStory(Scene):
         elif action == "joke":
             print "You want to hear a joke eh:"
             print "Well I'm not very funny but here goes"
-            print "A teenage girl had been talking on the phone for about half an hour, and then she hung up.\n"
-            print "“Wow!,” said her father, “That was short. You usually talk for two hours. What happened?”"
-            print "“Wrong number,” replied the girl.\n\n"
+            print "A plane full of crazy people is in the air. One guy goes in to the cockpit and asks the pilot to teach him how to fly. The pilot says if you can get everyone back there quiet I will teach you. A few minutes later the guy comes back and said they are quite now. The pilot asked how did you get them quiet, the guy says, I just told them all to go play outside."
             print "Since you didn't say yes you still must die !!"
             return 'death'
 
