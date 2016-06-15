@@ -67,10 +67,10 @@ class HartleyStory(Scene):
         elif action == "joke":
             print "You want to hear a joke eh:"
             print "Well I'm not very funny but here goes"
-            print "Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr."
-            print "The Gothon stops, tries not to laugh, then busts out laughing and can't move."
-            print "While he's laughing you run up and shoot him square in the head"
-            print "putting him down, then jump through the Weapon Armory door."
+            print "A teenage girl had been talking on the phone for about half an hour, and then she hung up.\n"
+            print "“Wow!,” said her father, “That was short. You usually talk for two hours. What happened?”"
+            print "“Wrong number,” replied the girl.\n\n"
+            print "Since you didn't say yes you still must die !!"
             return 'death'
 
         else:
