@@ -16,7 +16,7 @@ class Engine(object):
         current_scene = self.scene_map.opening_scene()
         last_scene = self.scene_map.next_scene('finished')
 
-        while current_scene != last_scene
+        while current_scene != last_scene:
             next_scene_name = current_scene.enter()
             current_scene = self.scene_map.next_scene(next_scene_name)
 
@@ -26,9 +26,10 @@ class Death(Scene):
 
     quips = [
         "You died.  I hope this was an intereting story about myself.",
-         "Unfortunately this is where the story ends, boring right?",
-         "Such a luser. Talking about me, durr! Wait...Huh.",
-         "Please give me the job :) !!"
+        "You died. Unfortunately this is where the story ends, boring right?",
+        "You died. Such a luser. Talking about me, durr! Wait...Huh.",
+        "You died. Please give me the job :) !!"
+        "You died. If you wish to contact me please email me, which was provided to you in my CV. Just note that you should rerun the game to find out more about me. I also posted the code for this on my github at https://github.com/hect1c/mystory. Thank you."
     ]
 
     def enter(self):
@@ -38,12 +39,12 @@ class Death(Scene):
 class HartleyStory(Scene):
 
     def enter(self):
-        print "The story of what makes Hartley Jean-Aimee unique, written on June 15 2016 at 6:23 pm while watching the Romania vs Switzerland Euro game in Python."
-        print "Well, where to begin, let's start with the fact that he is an American, born in French Guiana, residing currently in London. I know what a #$%#$."
-        print "Then we tie into the fact, that he has 3 first names. You don't see it, let me show:\n\n"
+        print "The story of what makes Hartley Jean-Aimee unique, written on June 15 2016 at 6:23 pm while watching the Romania vs Switzerland Euro game in Python.\n"
+        print "Well, where to begin, let's start with the fact that he is an American, born in French Guiana, residing currently in London. I know not really that interesting. Then we tie into the fact, that he has 3 first names. You don't see it, let me show:\n"
         print "Hartley - Actually a common English last name but obviously my first name, oh the irony.\n"
         print "Jean - Very common first name Jean of Arc, Jean-Claude Van Damme, ok either way it's technically a first name.\n"
-        print "Aimee - Well in french it means to love, but again common first name."
+        print "Aimee - Well in french it means to love, but again common first name.\n"
+        print "OK how about maybe when Gears 2 game out (yes I am a HUGE Gears of War fan) my brother, and best friend joined a Lan Tournament and came in 3rd place. I am a sniper pro, headshot galore. Oh the good times.\n"
         print "Do you want to know more? (options: yes, no, joke)"
 
         action = raw_input("> ")
@@ -57,13 +58,13 @@ class HartleyStory(Scene):
             return 'finished'
 
         elif action == "no":
-            print "'Well you said no, which frankly hurts a bit. But I'm going to forgive you and assume that's a good thing"
+            print "\nWell you said no, which frankly hurts a bit. But I'm going to forgive you and assume that's a good thing"
             print "I hope the story the intro was good some useful basic information about me. Can't give everything away a bit of mystery is good."
             print "I had some fun quickly writing this script. Thanks for that."
             print "But since you said no, but I'm sorry but you must die !!!!"
             return 'death'
 
-        elif action == "joke:
+        elif action == "joke":
             print "You want to hear a joke eh:"
             print "Well I'm not very funny but here goes"
             print "Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr."
@@ -81,6 +82,7 @@ class Finished(Scene):
     def enter(self):
         print "You know a lot about me! Good job."
         print "If you wish to contact me please email me, which was provided to you in my CV. Thank you."
+        print "I also posted the code for this on my github at https://github.com/hect1c/mystory"
         return 'finished'
 
 class Map(object):
